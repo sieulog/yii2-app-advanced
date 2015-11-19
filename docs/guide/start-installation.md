@@ -12,7 +12,7 @@ If you do not have [Composer](http://getcomposer.org/), follow the instructions 
 
 With Composer installed, you can then install the application using the following commands:
 
-    composer global require "fxp/composer-asset-plugin:~1.0.3"
+    composer global require "fxp/composer-asset-plugin:~1.1.0"
     composer create-project --prefer-dist yiisoft/yii2-app-advanced yii-application
 
 The first command installs the [composer asset plugin](https://github.com/francoispluchino/composer-asset-plugin/)
@@ -59,7 +59,7 @@ the installed application. You only need to do these once for all.
    ```apache
        <VirtualHost *:80>
            ServerName frontend.dev
-           DocumentRoot /path/to/yii-application/frontend/web/
+           DocumentRoot "/path/to/yii-application/frontend/web/"
            
            <Directory "/path/to/yii-application/frontend/web/">
                # use mod_rewrite for pretty URL support
@@ -79,7 +79,7 @@ the installed application. You only need to do these once for all.
        
        <VirtualHost *:80>
            ServerName backend.dev
-           DocumentRoot /path/to/yii-application/backend/web/
+           DocumentRoot "/path/to/yii-application/backend/web/"
            
            <Directory "/path/to/yii-application/backend/web/">
                # use mod_rewrite for pretty URL support
